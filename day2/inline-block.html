@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>인라인요소와 블록요소</title>
+    <style>
+        /*  id는 요소 뒤에 #id값
+            Class값을 접근할때는 .(닷)
+        */
+        div {
+            display : block;
+            width   : 300px;
+            height  : 300px;
+            border  : 3px solid  black;
+            background-color:    aquamarine;
+        }
+        div#d_2 { /* #은 id를 접근한다. unique하다. */
+            display : inline; /* 인라인요소는 크기변환이 안되네? */
+            width   : 200px;
+            height  : 300px;
+            border  : 3px solid  black;
+            background-color:    red;
+        }
+        span {
+            display : inline-block;
+            width  : 200px;
+            height : 350px;
+            background-color: blanchedalmond;
+        }
+        .s2 { /* class는 .(닷) 연산자를 이용한다. */
+            background-color: blueviolet;
+            width  : 350px;
+            height : 200px;
+        }
+        .s3 {
+            background-color: yellowgreen;
+        }
+    </style>
+</head>
+<body>
+    <!-- div*2 두 쌍 만들어짐-->
+    <!-- 블록요소 : 디브태그는 상자이다. 자체 크기가 있다. 수직으로 쌓인다. -->
+    <div>Div1</div>
+    <div id="d_2" class="cd_2">Div2</div> 
+
+     <!-- span*3 세 쌍이 만들어진다-->
+     <!-- 인라인요소 : 수평으로 쌓인다. -->
+    <span>Span1</span> 
+    <span class ="s2">Span2</span> 
+    <span class ="s3">Span3</span> 
+    <h1>블록요소 h1</h1>
+</body>
+</html>
+
+<!-- 태그 요소에는 2가지가 있다.
+     글자요소, 인라인요소
+     css는 이런 요소에 스타일을 입힐 수 있다. 한번에 일괄적으로
+     요소이름 div 
+     아이디를 부여할 수 있다. # [id]
+     div는 자체크기가 있다.
+
+     span
+     폭과 높이를 주어도 먹지 않는다. 인라인 요소이다. 글자요소이다. 왼쪽에서 오른쪽으로 수평적으로 쌓인다.
+     남는 크기가 있으면 줄어든다.
+     자체 크기를 가지지 않기 때문에 크기를 지정할 수 없다.
+
+     div
+     블록 요소이다.
+     크기를 가지고 있다. 가로와 세로를 변경할 수 있다.
+     크기를 변경할 수 있다.
+     display 속성에 inline_block을 주면 두 가지를 다 사용 가능하다.
+     display에 none을 주면 화면에 안보임. jf.setVisible(false); 부를 수 있다. 호출 할 수 있다.
+
+     css
+     위치는 헤드안에, 화면에 보여지는거는 바디안에 부모와 자식 관계
+
+     헤드태그
+     타이틀,제목,메타태그,
+
+     ES5,6,7  - 이크마스크립트 
+     let a = 5;
+     a = 10;
+     const a = 3.14; 
+-->
