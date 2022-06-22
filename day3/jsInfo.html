@@ -7,14 +7,17 @@
     <title>자바스크립트-프로그래밍언어</title>
 </head>
 <body>
-    <!-- 
-        프로그래밍언어는 스크립트태그안에 작성한다
-        type에는 mimetype을 작성하는데 앞에는 메인타입/서브타입으로 선언한다.
-     -->
-    <script type="text/javascript">
-        document.write('<table width="300px" height="150px" border="1">');
-        document.write('<tr>');
-        document.write('<td>');
+<!--
+    프로그래밍언어는 스크립트 태그안에 작성한다.
+    type에는 mimetype을 작성하는데 앞에는 메인타입/서브타입으로 선언한다.
+-->
+    <script type=""text/javascript"> // <scipt>이 안은 자바언어와 같은 문법을 사용한다. ex) 주석처리가 html과 달라진다.</<script>
+         /* 태그를 중첩하여 사용할 수 있다.
+         span요소를 display를 통해 inline과 block을 자유롭게 활용할 수 있다.
+         ㅁdiv는 react에서 자주 사용하니까 꼭 상기할 것.*/
+        document.write('<table width = "300px" height = "150px" border ="1">'); /* tr의 부모 / td의 조상 table- blcok요소이다 : 크기가 바뀐다. */
+        document.write('<tr>'); /* table의 자식 / tr의 부모 */
+        document.write('<td>'); /* tr의 자식, table은 조상 */
         document.write('내용');
         document.write('</td>');
         document.write('</tr>');
@@ -22,12 +25,12 @@
     </script>
 </body>
 </html>
+
 <!-- 
-    요소는 HTML페이지를 구성하는 부품이다.
+    요소는 HTML페이지를 구성하는 부품이다
     태그는 요소를 만들때 사용하는 작성 방법이다.
     주석은 프로그램 실행에는 영향을 미치지 않고 설명용으로 사용하는 코드를 의미
     스타일시트는 마크업언어가 표시되는 방법을 기술하는 언어로
-    HTML 페이지의 스타일을 지정할 때 사용함
-    자바스크립트는 HTML페이지에서 사용하는 프로그래밍 언어를 의미함
-
- -->
+    HTML 페이지의 스타일을 지정할 때 사용한다.
+    자바스크립트는 HTML페이지에서 사용하는 프로그래밍 언어를 의미한다.
+-->

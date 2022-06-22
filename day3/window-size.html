@@ -15,11 +15,11 @@
   </style>
 </head>
 <body>
-  <div class="d_view">윈도우 크기</div>
-  <script>
+  <div class="d_view">윈도우 크기</div><!-- 블록요소이다 -->
+  <script>//스크립트 작성할 때는 스크립트 안에만
     const d_view = document.querySelector('.d_view');
     function updatePrint(){
-      //백틱기호를 사용하면 텍스트와 변수의 값을 함께 사용할 수 있다
+      //백틱기호를 사용하면 텍스트와 변수의 값을 함께 사용할 수 있다 //도움을 조작한다.
       d_view.innerHTML = `
       window.screen: ${window.screen.width},${window.screen.height} <br/>
       window.outer: ${window.outerWidth},${window.outerHeight} <br/>
