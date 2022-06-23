@@ -20,14 +20,14 @@
 </head>
 <body>
   <table id="dg-dept"></table>
-  <div id="tb-dept" style="padding:5px 5px;">
+  <div id="tb-dept" style="padding:5px 5px;"> <!-- 툴바관련 코드 -->
     <a href="javascript:deptList();" class="easyui-linkbutton" iconCls="icon-search">Search</a>
   </div>
   <script>
     $('#dg-dept').datagrid({ // $는 jquery에서 사용
       title:'부서관리시스템',
       method:'get',
-      toolbar: '#tb-dept',
+      toolbar: '#tb-dept',/* 툴바를 스크립트에 붙여뒀다. */
       columns:[[
         {field:'deptno', title:'부서번호',  width:100}
        ,{field:'dname', title:'부서명',  width:100}
