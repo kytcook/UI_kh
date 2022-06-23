@@ -9,7 +9,7 @@ console.log('연습하기');
 function addNum(x, y) { // 함수 addNum이라는 이름에 파라미터 값을 x, y (함수가 실행되는데 필요한 매개변수)
   console.log(x + y); // 함수가 호출되면 실행이 된다.
 }
-addNum(2, 5);
+addNum(3, 5);
 
 function add(a, b) {
   return a + b;

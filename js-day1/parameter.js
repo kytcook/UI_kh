@@ -6,6 +6,7 @@ function hap(a, b){
   return a + b;
 }
 hap();
+
 function hap2(a=1, b=1){
   console.log(a+ ', ' + b);
   return a + b;
