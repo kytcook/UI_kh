@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>목록태그 활용예제</title>
+  <script src="https://kit.fontawesome.com/df14e96577.js" crossorigin="anonymous"></script>
+  <link rel = "stylesheet" href="./nav-style.css"> <!-- 틀을 잡을 때까지는 보더 속성을 추가해두고 보면서 작업을 한다. -->
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Gugi&display=swap');
+    </style>
+</head>
+<body>
+  <header>
+    <h1>Java Camp</h1>
+    <ul class = "gnb">
+      <!-- <i class="fas fa-search"></i> -->
+      <li><a href = "#">JAVA</a></li>
+      <li><a href = "#">ORACLE</a></li>
+      <li><a href = "#">HTMLS</a></li>
+      <li><a href = "#">JAVASCRIPT</a></li>
+      <li><a href = "#">NODEJS</a></li>
+      <li><a href = "#">REACT</a></li>
+    </ul>
+    <ul class = "lnb">
+      <li><a href = "#"><i class = "far fa-envelope"></i></a></li>
+      <li><a href = "#"><i class = "fab fa-facebook-square"></i></a></li>
+    </ul>
+    <a href="" class="btnMenu">
+      <i class="fas fa-bars"></i>
+    </a>
+  </header>
+  <main><!-- 내용이 들어가는 부분 -->
+    <main class="camp-g">
+      <div class="video-wrap"></div>
+        <video src="./forest.mp4" muted autoplay loop></video><!-- 내가 다운받은 비디오의 위치 경로를 지정해준다 -->
+        <!-- 얘만 하면 화면이 꽉차지가 않는다 -> css로 넘어간다 -->
+    </main>
+  </main>
+</body>
+</html>
+
+<!-- 
+  Global Navigation Bar : 전체페이지를 구성하는 메뉴 - gnb
+  Local Bavigation Bar : 로컬페이지를 구성하는 메뉴 - Lnb
+ -->
