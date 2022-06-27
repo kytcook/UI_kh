@@ -1,7 +1,7 @@
 /* react에서도 자주 쓰이니까 잘 봐둬 */
 /* colors2 안에 colors를 넣고, 그 colors2를 다시 colors3에 넣고... 아앜 */
 const colors = ["red", "green", "blue"];
-const colors2 = [...colors, "black"]; /* ...전개연산자, 스프레드 연산자 */
+const colors2 = [...colors, "black"]; /* ...전개연산자, 스프레드 연산자 */ // ...이 없으면 []표시 되고, 있으면 [대괄호] 없애고 이어준다
 console.log(colors2);
 const colors3 = ["gray", ...colors2]; /* ...전개연산자, 스프레드 연산자 */
 console.log(colors3);
@@ -33,12 +33,12 @@ console.log(obj4);
 
 let depts = [
   {deptno:10, dname:'지국총무부', loc:'인천'},
-  {deptno:10, dname:'개발부', loc:'제주'},
-  {deptno:10, dname:'기획부', loc:'부산'},
+  {deptno:20, dname:'개발부', loc:'제주'},
+  {deptno:30, dname:'기획부', loc:'부산'},
 ]
 
 let depts2 = [...depts, {deptno : 40, dname : '인사부', loc:'서울'}]
-console.log(depts2);
+console.log(depts2);// 왜 {}{deptno :20이징?}
 let depts3 = [...depts2, {deptno : 50}];
 console.log(depts3);
 

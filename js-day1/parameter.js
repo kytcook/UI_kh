@@ -13,6 +13,9 @@ function hap2(a=1, b=1){
 }
 hap2();
 
+
+console.log('----------------------------------------');
+
 function hap3(...numbers){
   console.log(numbers);
 }

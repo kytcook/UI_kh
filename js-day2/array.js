@@ -7,11 +7,12 @@ console.log(colors);
 // arrow function
 colors.forEach((colors) => console.log(colors)); /* forEach : 전체처리가 가능하다. */
 colors.forEach(function(color) {
-  console.log('element ==> ${color}');
+  console.log(`element ==> ${color}`);
 });
 
 colors[1] = "black";
-colors.map((colors) => console.log("map", color)); /* clg + space엔터하면 옆의 코드가 나옴 */
+colors.map((color) => console.log("map", color)); 
+// clg + space엔터 = console.log(object))
 // 배열 선언
 const copy = [];
 

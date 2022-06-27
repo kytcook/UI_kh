@@ -7,12 +7,12 @@ num = num + 2;
 console.log(num);
 num +=3;
 console.log(num);
-// ==
+// ==  값만 비교한다.
 // === 타입까지도 비교한다.
 console.log(1 == 1);    // true
 console.log(1 === 1);   // true
-console.log(1 == '2');  // true
-console.log(1 == '2');  // false
+console.log(2 == '2');  // true - 정수타입과 문자타입으로 다르지만 값만 비교
+console.log(2 === '2');  // false - 타입까지도 비교한다 
 
 const myCar = {
   name  : '소나타',
@@ -33,6 +33,7 @@ let herCar = himCar;
 console.log(herCar == himCar);
 console.log(herCar === himCar);
 
+console.log('---------선언문---------');
 //선언문
 let b;
 b = 2;
@@ -50,9 +51,9 @@ console.log(text); '1010'
 
 // 할당연산자
 let a = 1;
-a += 2; // 먼저 더하고 나중에 대입•축양버전
+a += 2; // 먼저 더하고 나중에 대입•축약버전
 console.log(a);
-a *= 2; // 먼저 곱하고 나중에 대입•축양버전 
+a *= 2; // 먼저 곱하고 나중에 대입•축약버전 
 console.log(a); 
-a -= 2; // 먼저 더하고 나중에 대입•축양버전
+a -= 2; // 먼저 더하고 나중에 대입•축약버전
 console.log(a); 
