@@ -1,0 +1,8 @@
+@charset 'UTF-8'; /* 인코딩 타입 설정 - UTF-8 : 다국어설정 */
+* {
+  border : 1px solid black;
+}
+
+h1 {
+  color: aquamarine;
+}
