@@ -9,5 +9,14 @@ ajax.send();// 전송이 일어난다
 console.log(ajax.response);
 const depts = JSON.parse(ajax.response);
 console.log('size : ',depts.length);
+const table = document.createElement('table');
+for (let i = 0; i < depts.length; i++) {
+  const tr = document.createElement('tr');
+  const td = document.createElement('td');
+  const val = `<tr><td>${depts[i].deptno}</td><td>${depts[i].dname}</td><td>${depts[i].loc}</td></tr>`;
+  td.appendChild(document.createTextNode(val));
+  tr.appendChild(td);
+  table.appendChild(tr);
+}
 
 document.getElementById('root').appendChild(table);

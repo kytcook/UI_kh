@@ -15,8 +15,8 @@
   <header>
     <h1>Java Camp</h1>
     <ul class = "gnb">
+      <li class="on" ><a href='#'>JAVA</a></li>
       <!-- <i class="fas fa-search"></i> -->
-      <li><a href = "#">JAVA</a></li>
       <li><a href = "#">ORACLE</a></li>
       <li><a href = "#">HTMLS</a></li>
       <li><a href = "#">JAVASCRIPT</a></li>
@@ -38,6 +38,18 @@
         <!-- 얘만 하면 화면이 꽉차지가 않는다 -> css로 넘어간다 -->
     </main>
   </main>
+  <script>
+    const btns = document.querySelectorAll(".gnb li") //여러개를 선택할 때
+    btns.forEach((btn, index) => {
+      btn.addEventListenr('click',(e)=> {
+        console.log(index);// 메뉴 리스트의 순번이 출력 0 1 4
+        for(let item of btns) {
+          item.classList.remove('on');
+        }
+        btns[index].classList.add('on');
+      });
+    })
+  </script>
 </body>
 </html>
 
