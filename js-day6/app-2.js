@@ -5,5 +5,5 @@ increase();
 const c2 = getCount();
 console.log('getCount() => ', getCount());
 console.log('c2', c2);
-console.log('getCount() => ', getCount());
+console.log('count() => ', getCount());
 

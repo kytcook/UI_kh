@@ -7,9 +7,6 @@
   <title>목록태그 활용예제</title>
   <script src="https://kit.fontawesome.com/df14e96577.js" crossorigin="anonymous"></script>
   <link rel = "stylesheet" href="./nav-style.css"> <!-- 틀을 잡을 때까지는 보더 속성을 추가해두고 보면서 작업을 한다. -->
-  <style>
-    @import url('https://fonts.googleapis.com/css2?family=Gugi&display=swap');
-    </style>
 </head>
 <body>
   <header>
@@ -31,7 +28,7 @@
       <i class="fas fa-bars"></i>
     </a>
   </header>
-  <main><!-- 내용이 들어가는 부분 -->
+  <main><!-- 내용이 들어가는  부분 -->
     <main class="camp-g">
       <div class="video-wrap"></div>
         <video src="./forest.mp4" muted autoplay loop></video><!-- 내가 다운받은 비디오의 위치 경로를 지정해준다 -->
@@ -41,8 +38,8 @@
   <script>
     const btns = document.querySelectorAll(".gnb li") //여러개를 선택할 때
     btns.forEach((btn, index) => {
-      btn.addEventListenr('click',(e)=> {
-        console.log(index);// 메뉴 리스트의 순번이 출력 0 1 4
+      btn.addEventListener('click', (e)=> {
+        console.log(index);// 개발자도구(콘솔) - 네비클릭시 메뉴 리스트의 순번이 출력 0 1 2
         for(let item of btns) {
           item.classList.remove('on');
         }

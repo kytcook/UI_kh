@@ -1,6 +1,7 @@
+@import url('https://fonts.googleapis.com/css2?family=Gugi&display=swap');
 * {
   box-sizing: border-box;
-  /* border: 1px solid red; */
+  border: 1px solid red;
 }
 
 ul {/* 목차에 구슬 없앰 */
@@ -29,11 +30,11 @@ header {/* 부모선택자 - 자바캠프에만 적용 */
   z-index: 2;
   /* 미디어쿼리를 통해 화면을 동적으로 처리할 수 있다. */
 }
-
+ 
 header h1 {
   margin : 0px 20px; /* 6. 마진 : 위아래 0px 양옆에 20px  */
   font : bold;
-  color: gold;
+  color: rgb(144, 117, 217);
 }
 
 header .gnb {
