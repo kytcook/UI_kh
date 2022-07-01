@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    * {
+      border: 1px solid blue;
+    }
+    .box {
+      background-color: red;
+      width : 100px;
+      height : 100px;
+      float : right;
+      margine-left: 10px;
+    }
+  </style>
+</head>
+<body>
+  <span class = "box">1
+    <!-- <h1>1</h1> 인라인 요소안에 블럭요소는 안된다. -->
+  </span>
+  <span class = "box">2
+  </span>
+  <span class = "box">3
+  </span>
+  <span style="width: 100px; height: 100px;">1</span><span>2</span><span>3</span>
+</body>
+</html>
+<!--
+layer의 개념을 적용하여 생각해보시오.
+float라는 것이 다른 요소(삼각형, 원)와 만났을 때 평면적으로
+보이 겠지만, 바깥쪽에 글씨가 있는 레이어, 위쪽에 또 다른 레이어가 있다.
+둘이 합쳐져서 평면으로 구성된다.
+ -->

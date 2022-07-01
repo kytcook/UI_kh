@@ -14,7 +14,7 @@ function choice(zipcode, address) {
   document.querySelector('#address').value = address; // 파라미터로 넘어온 값을 주면 자동으로 꽂힌다.
     // 값이 선택되면 조회 결과 화면 지워주세요.
     // insert here
-    document.getElementById("root").innerHTML = "";
+  document.getElementById("root").innerHTML = "";
 }
 
 function action(dong){
@@ -25,10 +25,10 @@ function action(dong){
   // 오라클 서버를 경유해서 가져오는 대신에 해커뉴스에서 제공하는 데이터셋을
   // 활용해서 dom(html요소-활용 -> React수업 선수학습)을 조작해 보자.
   // [주소URL]?dong= (=이꼴 안적어주면 jsp파일에서 설정된 디폴트값만 불러와진다.)
-  const ZIPCODE_URL = 'http://localhost:8000/json/jasonZipCodeList.jsp?dong='+dong;//I/O 통신 ->  dead lock , crash
+  const ZIPCODE_URL = 'http://localhost:8000/taek_web/json/jasonZipCodeList.jsp?dong='+dong;//I/O 통신 ->  dead lock , crash
   
   ajax.open('GET', ZIPCODE_URL, false);//true:동기적처리, false:비동기처리
-  ajax.send();// 전송이 일어난다
+  ajax.send(); // 전송이 일어난다
   console.log('11:'+ajax.response);
   const address = JSON.parse(ajax.response);
   const table = document.createElement('table');
@@ -47,7 +47,7 @@ function action(dong){
     const tr = document.createElement('tr');
     const td = document.createElement('td');
     const a = document.createElement('a');
-    a.href = "javascript :choice('"+address[i].zipcode+"','"+address[i].address+"')";//싱글이나 더블을 붙이지 않으면 변수취급 - 앵커태그가 함수를 넘김(?)
+    a.href = "javascript: choice('"+address[i].zipcode+"','"+address[i].address+"')";//싱글이나 더블을 붙이지 않으면 변수취급 - 앵커태그가 함수를 넘김(?)
     td.setAttribute('width','90');
     a.appendChild(document.createTextNode(`${address[i].zipcode}`));
     td.appendChild(a);

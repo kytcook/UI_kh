@@ -1,0 +1,51 @@
+*{
+  border: 1px solid red;
+  box-sizing: boder-box;
+}
+
+.container{
+  width: 1080px;
+  overflow: hidden; /* 삐져나가는애를 자른다 */
+  margin: 0 auto;
+  margin-bottom: 8px;
+}
+
+ul.gnb {
+  float: left;
+  background-color: greenyellow;
+}
+
+ul.gnb > li {
+  list-style-type: none; /* 리스트에 아무것도 안주겠다. 동그라이 없앤다. */
+  float: left;
+  padding-left: 16px; /* 상자가 옆으로 붙는다. */
+}
+
+.rank{
+  float:right;
+  background-color: yellow;
+}
+
+ul.rank > li {
+  list-style-type: none;
+  padding-left: 0px;
+}
+
+.left{
+  float: left;
+  background-color: red;
+  width: 740px;
+  height: 428px;
+}
+
+.right{
+  float: left;
+  background-color: blue;
+  width: 332px;
+  height: 428px;
+}
+
+.footer {
+  background-color: yellow;
+  height: 80px;
+}
