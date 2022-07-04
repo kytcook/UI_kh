@@ -1,0 +1,36 @@
+@charset 'UTF-8';
+.outline {
+  border : 2px solid gray;
+  width: auto;
+  height: auto;
+  margin: 5px;
+  padding-left: 20px;
+}
+.공지사항 {
+  position: absolute;
+  left : 40px;
+  top : -2px;
+  border : 1px soild white;
+  background-color: white;
+}
+
+.작성 {
+  position: relative;
+  display: block;
+  margin:  20px;
+  left : 5%
+}
+
+
+/* 수평선 아래 표 */
+table {
+  width : 55%;
+  height : 250px;
+}
+.개요 {
+  background-color: rgb(247, 173, 147);
+  color: white;
+}
+tr {
+  background-color: rgb(250, 246, 212);
+}
