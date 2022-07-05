@@ -29,6 +29,11 @@ body {
   transform: translate(-50%, -50%);
 }
 
+.wrap .profile {
+  width: 100%;
+  text-align: center;
+}
+
 .wrap .profile img {
   width  : 200px;
   height : auto;
@@ -53,7 +58,7 @@ body {
   display: block;
   width: 180px;
   height: 32px;
-  font: bold 12px/32px;
+  font: bold 12px/32px "arial";
   margin: 0px auto 20px;
   color: white;
   text-shadow: 0px 0px 5px rgba(255,255,255,0.6);
