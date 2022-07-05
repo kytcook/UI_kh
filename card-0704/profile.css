@@ -1,0 +1,127 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  /* 패딩값이 너비 값에 포함되어 있게 됨 */
+  box-sizing: border-box;
+  /* border: 1px solid red; */
+}
+
+ul {
+  list-style: none;/* 구슬 사라짐 */
+}
+
+a {
+  text-decoration: none;/* 밑줄 사라짐 */
+}
+
+body {
+  background-color: lightcyan;
+}
+
+.wrap {
+  width: 340px;
+  background-color: white;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  border-radius: 10px;
+  /* 자기자신의 크기만큼 이동시킴 */
+  transform: translate(-50%, -50%);
+}
+
+.wrap .profile img {
+  width  : 200px;
+  height : auto;
+  border-radius: 50%;
+  margin-top: 5%;
+  margin-bottom: 5%;
+}
+
+.wrap .profile h1 {
+  font: bold 22px/1 "arial";
+  color : gray;
+  margin-bottom: 5px;
+}
+
+.wrap .profile p {
+  font: 12px/1 "arial";
+  color : gray;
+  margin-bottom: 30px;
+}
+
+.wrap .profile .btnView {
+  display: block;
+  width: 180px;
+  height: 32px;
+  font: bold 12px/32px;
+  margin: 0px auto 20px;
+  color: white;
+  text-shadow: 0px 0px 5px rgba(255,255,255,0.6);
+  background-color: aqua;
+  border-radius: 16px;
+}
+
+.wrap .contact {
+  margin-bottom: 25px;
+}
+
+.wrap .contact li {
+  width: 100%;
+  padding: 10px 0px;
+  border-bottom: 1px solid white;
+}
+
+.wrap .contact li:last child {
+  border-bottom: none;
+}
+
+.wrap .contact li i{
+  width: 20%;
+  text-align: center;
+  color : #555;
+  font-size: 14px;
+}
+
+.wrap .contatct li span {
+  font : 11px/1 "orbitron";
+  color: #555;
+  letter-spacing: 1px;/* 글자간 간격 */
+}
+
+.wrap .others {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.wrap .others a {
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+  background-color: gray;
+  border-radius: 50%;
+  margin: 0px 10px;
+  opacity: 0.4;
+}
+
+.wrap .others a:nth-of-type(1) { /* 인덱스 값을 주어서 처리할 수 있다. */
+  background-color: aqua;
+}
+.wrap .others a:nth-of-type(2) {
+  background-color: green;
+}
+.wrap .others a:nth-of-type(3) {
+  background-color: pink;
+}
+.wrap .others a:nth-of-type(4) {
+  background-color: orange;
+}
+
+
+.wrap .others a.on {/* 첫번째것만 색깔 진하게 표시 */
+  opacity: 1;
+}
+
+.menu {
+  display: flex;
+  justify-content: space-between;
+}

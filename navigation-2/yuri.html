@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="./nav-style.css">
+</head>
+<body>
+  <!-- ============================[[ header 시작  ]]====================================================== -->
+  <header>
+    <div class="container">
+      <h1><a href="#"><img src="./home-solid.svg" width="50px" height="50px" alt="홈"></a></h1>
+      <nav class="main-navigation">
+        <a href="#">HTML5</a>
+        <a href="#">CSS</a>
+        <a href="#">JAVASCRIPT</a>
+        <a href="#">REACT</a>
+        <a href="#" class="btn">문의하기</a>
+      </nav>
+    </div>
+  </header>
+  <!-- ============================[[ header 끝  ]]====================================================== -->
+  <!-- ============================[[ main 시작  ]]====================================================== -->
+  <main>
+    <!-- ============================[[ video 시작  ]]====================================================== -->
+    <div class="video-wrap">
+      <!-- 소리꺼주고 자동재생 무한루프 -->
+      <video src="./forest.mp4" muted autoplay loop></video>
+    </div>
+    <!-- ============================[[ video 끝  ]]====================================================== -->
+    <!-- ============================[[ container 시작  ]]====================================================== -->
+    <div class="container">
+      <div class="text-wrap">
+        <!-- 광고 내용 시작 -->
+        <h2>MVC패턴 <br> 계층형 게시판</h2>
+        <h3>JAVA + Servlet + JSP + Spring</h3>
+        <h3>HTML5 + CSS3 + JavaScript + React</h3>
+        <p>
+          Front-End에서 부터 Back-End까지<br/>
+          풀스택 개발자를 양성하는 과정입니다.
+        </p>
+        <!-- 광고 내용 끝 -->
+        <div class="btn-wrap">
+          <a href="#" class="btn">강좌등록하기</a>
+          <!-- 공통적인건 btn에서 같이처리하고 다른건 ghost-btn에서 처리 -->
+          <a href="#" class="btn ghost-btn">가입하기</a>
+        </div>
+      </div>
+    </div>
+    <!-- ============================[[ container 끝  ]]====================================================== -->
+  </main>
+  <!-- ============================[[ main 끝  ]]====================================================== -->
+</body>
+</html>
