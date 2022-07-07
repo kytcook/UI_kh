@@ -4,13 +4,12 @@ function handleEnter(){
     console.log('엔터 쳤을 때');
     searchList();
   }
-}
+
 function searchList() {
-  const query = document.querySelector('.input').value;
+const query = document.querySelector('.input').value;
 console.log('사용자가 입력한 검색어 : ' + query);
 const ajax = new XMLHttpRequest();
-let content = '';
-const MOST_URL = "https://www.googleapis.com/youtube/v3/videos?part=snippet&chart=mostPopular&maxResults=25&key=AIzaSyBTwWoYZPb-scjc5J4nTEnuee6FOH52bWI"; /* 저장한 포스트맨의 유튜브 URL 저장 */
+const SEARCH_URL = `https://youtube.googleapis.com/youtube/v3/search?part=snippet&maxResults=25&q=${query}&key=AIzaSyBTwWoYZPb-scjc5J4nTEnuee6FOH52bWI&type=video`; /* 저장한 포스트맨의 유튜브 URL 저장 */
 ajax.open("GET", SEARCH_URL, false);
 ajax.send();
 const videoList = [];
