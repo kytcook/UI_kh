@@ -14,10 +14,11 @@ function searchList() {
   };
 
 fetch(`https://youtube.googleapis.com/youtube/v3/search?part=snippet&maxResults=25&q=${query}&key=AIzaSyBTwWoYZPb-scjc5J4nTEnuee6FOH52bWI&type=video`, requestOptions)
-  .then(response => response.json())
+  .then((response) => response.json())
   // .then(result => console.log(result))
-  .then(result => {
-    const items = result.items;  // 변수 items 안에 result아래 items를 담는다.
+  .then((result) => {
+    console.log(result)
+    const items = result.items;  // 변수 items 안에, result아래 items를 담는다.
     const videoList = [];
     videoList.push(`<ul class='videos'>`);
     for(let i=0; i<items.length; i++){
