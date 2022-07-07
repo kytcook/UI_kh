@@ -11,6 +11,7 @@ function methodA(){
 
 
   // insert here - before
+  innerMethod();
   /* 중복스코프
   아직 함수가 만들어져 있지 않은데(선언이 먼저인데) 호출이 된다.? -> 호이스팅 
   함수안에 중복 함수가 있을 수 있다.
