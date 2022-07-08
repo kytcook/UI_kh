@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script src="../../js/jquery.min.js"></script><!-- min.js : 띄어쓰기나 들여쓰기를 하지 않은 가장 슬림한 코드 jquery기반이라는 위치를 보여줌-->
+  <script src="../../js/jquery.easyui.min.js"></script><!-- 라이브러리. 이거빼면 화면 안나옴   -->
+  <link rel="stylesheet" href="../../themes/default/easyui.css">
+  <link rel="stylesheet" href="../../themes/icon.css">
+  <script>
+    function addressList(){
+    $('#dg_address').datagrid({
+      url:'http://127.0.0.1:5500/jEasyUI/addressBook/address.json',
+    });
+  }
+    function addressInsert(){
+      $('#dia_insert').dialog('open');
+  }
+  </script>
+</head>
+<body>
+  <table id="dg_address" class="easyui-datagrid"></table>
+  <div id="tb">
+    <a href="javasscript:addressList()"   class="easyui-linkbutton" data-options="iconCls:'icon-edit',plain:true">입력</a>
+    <a href="javasscript:addressInsert()" class="easyui-linkbutton" data-options="iconCls:'icon-help',plain:true">수정</a>
+    <a href="javasscript:addressUpdate()" class="easyui-linkbutton" data-options="iconCls:'icon-help',plain:true">삭제</a>
+    <a href="javasscript:addressDelete()" class="easyui-linkbutton" data-options="iconCls:'icon-help',plain:true">조회</a>
+  </div>
+  <script>
+    // window.onload 와 같다.
+    $(document).ready(function(){
+      $('#dg_address').datagrid({/* 라이브러리만으로 화면을 그리고 있다. */
+        toolbar: '#tb',
+        method: 'get', 
+        title :'주소록',
+        columns:[[
+          {field:'name',title:'이름',width:100, align:'center' },
+          {field:'birthday',title:'생일',width:150, align:'center'},
+          {field:'address',title:'주소',width:250,align:'right', align:'left'} 
+          ]],
+       });///end of datagrid
+
+    });///end of ready
+    // url:'datagrid_data.json', /* 404 */
+   /* 오류 404 - 오타, 소스코드 */
+  </script>
+<!-- =====================주소 등록 다이얼 로그 화면============================= -->
+  <div id="dia_insert" class="easyui-dialog" title="My Dialog" style="width:400px; height:200px;"
+      data-options="iconCls:'icon-save', resizable:true, modal:true, closed:true">
+      Dialog Content.
+  </div>
+<!-- ============================================================================ -->
+</body>
+</html>
+
+
+
+<!-- 
+  라이브러리를 밟고서 프레임워크로
+HTML로 처리 class가 생략되어있다. class = "easyui-datagrid"("접두어-객체이름")
+<table id="dg"></table> // dg는 생성자쯤으로 생각
+
+  $('#dg').datagrid({
+    url:'datagrid_data.json',
+    columns:[[
+        {field:'code',title:'Code',width:100},
+        {field:'name',title:'Name',width:100},
+        {field:'price',title:'Price',width:100,align:'right'}
+    ]]
+});
+템플릿, 라이브러리 활용할 것 권장.
+선언이 먼저
+
+  데이터 셋과 관련한 부분을 집중적으로 분석
+  UI 템플릿 많이 제공되고 있다.
+  html과 js가 만나는 부분 - 비벼지는 부분을 할 수 있는 사람인가..?
+  오라클, MySql(범용적), - ROBMS제품 - PL/SQL표준 준수 
+  어느쪽에서든 공통분모를 90퍼 이상 사용하고 있다.
+  오라클과 MySql
+  NO-SQL : 경량DB : 마리아DB 몽고 DB
+  html + 오라클
+  1)node.js
+  2)single page application
+ -->
+

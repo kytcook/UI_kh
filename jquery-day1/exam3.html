@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script
+  type="text/javascript"
+  src="http://code.jquery.com/jquery-3.2.1.min.js"
+></script>
+</head>
+<body>
+  <script>
+    $(document).ready(function(){ /* 익명함수 - 딱 한번만 실행된다 */
+      let array = [
+         {name : 'Hanbit Media', link: 'http://hanb.co.kr'}
+        ,{name : 'Google', link: 'http://google.com'}
+        ,{name : 'Naver', link: 'http://naver.com'}
+      ];
+      $.each(array, function(index, item){
+        let output = '';
+        output += '<a href="'+item.link+'">';
+        output += '<h1>='+item.link+'</h1>';
+        output += '</a>';
+        document.body.innerHTML += output;
+      });
+    })
+  </script>
+  <!-- 
+    화면을 구성하는 방법
+1. html
+2. html + javascript
+3. javascript -> jEasyUI와 같은 js기반 UI솔루션
+화면 구성을 순수 자바스크립트 3. 만으로 해봄
+   -->
+
+</body>
+</html>

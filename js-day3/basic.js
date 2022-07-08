@@ -11,7 +11,7 @@ const hap3 = (a, b) => a+b;
 const total = hap; // 함수도 오브젝트이므로 주번을 갖기 때문에..
 console.log(total(2, 3));
 console.log(hap2(2,3));
-console.log(hap(2,3));
+console.log(hap3(2,3));
 
 const minus = (a,b) => a - b;
 const multiply = (a,b) => a * b;
