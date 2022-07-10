@@ -21,7 +21,7 @@ fetch(`https://youtube.googleapis.com/youtube/v3/search?part=snippet&maxResults=
     const items = result.items;  // 변수 items 안에, result아래 items를 담는다.
     const videoList = [];
     videoList.push(`<ul class='videos'>`);
-    for(let i=0; i<items.length; i++){
+    for(let i=0; i<items.length; i++){s
       videoList.push(`<li class = 'container'>`);/* ul태그안에 li가 담긴다 */
       videoList.push(`<div class = 'video'>`);/* ul태그안에 li가 담긴다 */
       videoList.push(`<img class ='thumbnail' src='${items[i].snippet.thumbnails.medium.url}' alt='이미지'>`);
