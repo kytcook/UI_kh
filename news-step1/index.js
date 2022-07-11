@@ -1,4 +1,5 @@
-var requestOptions = {
+const content = document.createElement('div')
+const requestOptions = {
   method: 'GET',
   redirect: 'follow'
 };

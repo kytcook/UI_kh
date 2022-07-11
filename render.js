@@ -2,7 +2,9 @@
 const express = require('express');
 
 const app = express();
-//app.use(express.static("public"));
+
+app.use("/public",express.static(_dirname+"public"));
+
 //app.use('views','views');
 app.set("view engine", "ejs");
 
