@@ -7,7 +7,7 @@ console.log(colors);
 // arrow function
 colors.forEach((colors) => console.log(colors)); /* forEach : 전체처리가 가능하다. */
 colors.forEach(function(color) {
-  console.log(`element ==> ${color}`);
+  console.log(`element ==> ${color}`);/* `백틱기호는 문자열을 표시하기 위한 기호? $는 백틱안에서 변수를 불러오기 위한 기호 */
 });
 
 colors[1] = "black";

@@ -1,6 +1,6 @@
-const ajax = new XMLHttpRequest();
 // 오라클 서버를 경유해서 가져오는 대신에 해커뉴스에서 제공하는 데이터셋을
 // 활용해서 dom(html요소-활용-> React수업 선수학습)을 조작해 보자.
+const ajax = new XMLHttpRequest();
 const NEWS_URL = 'http://localhost:8000/json/deptToJSON.jsp';//I/O 통신 ->  dead lock , crash
 
 ajax.open('GET', NEWS_URL, false);//true:동기적처리, false:비동기처리

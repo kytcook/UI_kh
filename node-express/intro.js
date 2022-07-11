@@ -1,6 +1,7 @@
 // import express from "express"
 // 아래에서 require를 사용하려면 package.json에 type:module이 아니라 commonjs로 변경해줌
 const express = require('express');// npm i --save-dev express 설치가 되있어야 한다.
+
 // ES6를 사용하려면 type:module로 정의함
 
 // NodeJs 에서 CommonJS 사용하면

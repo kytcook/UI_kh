@@ -15,3 +15,6 @@ function hap2(a=1, b=1){
 }
 //hap2(2, 3);
 console.log(hap2(2, 4));
+
+console.log("-----------------");
+console.log(hap2(4,6));

@@ -8,6 +8,6 @@ ajax.send();// 전송이 일어난다
 // 서버로 부터 응답받은 내용을 출력하기
 console.log(ajax.response);
 const depts = JSON.parse(ajax.response);
-console.log('size : ',depts.length);
+console.log('size : ',depts.length); 
 
 document.getElementById('root').appendChild(table);

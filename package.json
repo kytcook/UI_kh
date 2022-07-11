@@ -14,7 +14,6 @@
   "keywords": [],
   "author": "",
   "license": "ISC",
-
   "dependencies": {
     "colors": "^1.4.0",
     "nodemon": "^2.0.19"

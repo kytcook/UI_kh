@@ -12,6 +12,7 @@ colors.forEach(function(value, index,array) {
   console.log(value);
   console.log(index);
   console.log(array);
+  // console.log(thisArg);
 })
 colors.forEach(function(value) { // 이름이 같으면 같은 함수를 부른다.
   console.log(value);
@@ -51,7 +52,7 @@ myForEach(colors, console.log);
   함수형 프로그래밍을 하면 데이터를 변경하지 않고 
   변수를 사용하지도 않고 조건문과 반복문도 사용하지 않고 코딩전개 가능함
   이렇게 사용하려면 순수함수로 정의하는 것이 중요
-  순수함수란 불면성을 지킨 함수를 말함.
+  순수함수란 불변성을 지킨 함수를 말함.
   함수 내부에서는 외부상태를 절대 변경하지 않는다.
   : 배열에서도 사용할 수 있는 고차함수가 많다.
   인자로 함수를 받거나(콜백함수)
