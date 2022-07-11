@@ -1,6 +1,7 @@
 const express = require('express');
 const app = express();
-app.use(express.json());
+// app.use(express.static("/public"));
+// app.set('views','views')
 // nodejs로 부터 요청객체와 응답 객체는 주입 받음
 app.post("/", (req,res) => { /* request */
   console.log(req.body); /* 쿼리스트링의 키값이 되어야 한다 반드시 */
