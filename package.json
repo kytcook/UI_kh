@@ -5,7 +5,7 @@
   "main": "index.js",
   "type": "commonjs",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "server":"nodemon render.js"
   },
   "repository": {
     "type": "git",
@@ -25,5 +25,8 @@
   "bugs": {
     "url": "https://github.com/kytcook/UI_kh/issues"
   },
-  "homepage": "https://github.com/kytcook/UI_kh#readme"
+  "homepage": "https://github.com/kytcook/UI_kh#readme",
+  "staticFiles" : {
+    "staticFiles" : "public"
+  }
 }
