@@ -37,6 +37,6 @@ let depts = [
 ]
 
 let depts2 = [...depts, {deptno : 40, dname:"운영부", loc:"제주"}];
-console.log(depts2);//객체일때는 덮어씌어지지만, 대괄호(자료구조)형태일 때는 추가가 된다.
+console.log(depts2);// 객체일때는 덮어씌어지지만, 대괄호(자료구조)형태일 때는 추가가 된다.
 let depts3 = [...depts, {deptno : 50}];
-console.log(depts3);//
+console.log(depts3);// 나머지는 빈값으로 표시 null이냐 undefine이냐
