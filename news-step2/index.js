@@ -63,12 +63,23 @@ fetch("https://api.hnpwa.com/v0/news/1.json", requestOptions)
   무엇으로 기준할 것인가?
 
   글목록의 링크는 #이었음. 그러면 location.hash에 #이 들어왔음
-  그러면 이것으로 어떤 참 거짓을 나눌 수 있지?
-  location.hash에 #만 들어오면 빈값을 반환함
+  그러면 이것으로 어떤 참 거짓을 나눌 수 있지? 0이면 false 나머지는 모두 true
+  location.hash에 #만 들어오면 빈값을 반환함 ("")
   첫 진입일때는 getnewsList호출하고,
-  해시값이 존재하면 getNewsContent호출한다
+  해시값이 존재하면 getNewsContent호출한다.
 */  
   function router() {
+    // console.log(location.hash);#3214567 뭘 기억?? 페이지의 특성은 변한다.
+    // 1페이지를 보고있을 때 3페이지를 보고 있을 때, 
+    // 페이지라는 정보는 언제 어디서 사용할까??
+    // 한 페이지에 10개씩 보여준다. 나눠져있다.
+    // 글 목록화면에서 실제 페이징이 일어난다.
+    // 목록으로btn -> 어떤 페이지를 보여줘야 하나?? -> 1page or 2page 후자 -> getnewsList호출이 되어야 한다.
+    // ??전역변수 ->
+    // 커런트페이지 ->
+    // 공유 -> static, singleton : 공유되는 자원들을 하나로 묶어둔다 -> js에서는 : 리덕스
+    // ㅋㅋ
+
     const hashValue = location.hash;
     // 첫 진입이면
     if(hashValue === "") {

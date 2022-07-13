@@ -16,14 +16,14 @@ function getNewsList(){
     .then(result => {
       const newsList = [];
       newsList.push("<ul>");
-      for(let i=0;i<10;i++){
+      for(let i=0;i<30;i++){
         newsList.push(`
           <li>
             <a href='#${result[i].id}'>
               ${result[i].title}(${result[i].comments_count})
             </a>
           </li>
-        `); 
+        `);  // #을 빼면 안돼
         newsList.push("</ul>");
         // container.innerHTML = "111";// 왜 111출력이 안될까?? - html쪽에 defer를 추가하지 않음.-  but why? - 
         container.innerHTML = newsList.join("");
@@ -39,7 +39,7 @@ function getNewsList(){
   function getNewsContent(){
     const id = this.location.hash.substring(1); // #31914288에서 첫번째 자리 #은 잘라내고 쓴다. 샵이 있어야 해쉬값이 된다.
     fetch(CONTENT_URL.replace("@id", id), requestOptions2) // url을 위에 변수로 담아서 따로 뺏다. "https://api.hnpwa.com/v0/item/@id.json"
-      .then(response => response.text())
+      .then(response => response.json())
       .then(result => {
         container.innerHTML = `
          <h1>${result.title}</h1>
