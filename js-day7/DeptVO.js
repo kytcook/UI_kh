@@ -35,3 +35,4 @@ console.log(dvo.getDeptno);
   이제는 함수형의 시대 ~
   자바스크립 기반의 getter setter
 */
+

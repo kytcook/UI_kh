@@ -1,0 +1,16 @@
+a {
+  text-decoration: none;/* 밑줄이 싫어요 */
+  width: 100px;
+  height: 50px;
+  display: block;/* 인라인요소를 블럭요소로 바꾼다. */
+  background-color: aqua;/* 블럭크기를 가시적으로 보기 위해서 */
+  margin : 100px;
+}
+
+.box {
+  width : 500px;
+  height : 500px;
+  background-color: blueviolet;
+  margin: 100px;
+}
+

@@ -1,0 +1,118 @@
+<!-- 예측을 먼저하고 실행하기~ -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    .outer {
+      width: 500px;
+      height: 500px;
+      background-color: beige;
+    }
+    .inner {
+      width: 50%;
+      height: 50%;
+      background-color: blueviolet;
+      transform: translateY(50%);/* y축으로 내려온다 */
+    }
+    button {
+      position: relative;
+      top : 50%;
+      left : 30%;
+      transform : translate(-50%, -50%);
+    }
+  </style>
+</head>
+<body>
+  <div class="outer">
+    <div class="inner">
+      <button>Click Me</button>
+    </div>
+  </div>
+  <script>// 바디안에, div태그 마지막에 위치를 잡았다. defer
+  /*
+    // document document = new document(); 인스턴스화를 해야한다.
+    // A a = null;
+    // a.toString(); => nullPointerException
+  ////////////////////////////////////////////////////////////////
+    // A a = null;
+    // a = new A();
+    // a.toString(); => null값이 나온다.
+  */
+    // capturing | bubbling
+    // 목표 : stopPropagation을 쓰지 않고도 버블링을 막을 수 있다.
+    const outer = document.querySelector(".outer");//window : 최상위객체 - document : 문서전체에 접근한다. 내장객체(브라우저에서 제공해준다.)
+    const inner = document.querySelector(".inner");
+    const button = document.querySelector("button");//#도 쓰지말고 .도 찍지마라라
+    outer.addEventListener('click',(event) => {//arrow function을 이용하여 객체를 주입 받는다.
+      // console.log(`outer : ${event.currentTarget}, ${event.target}`);
+      // 넌 버블링 대상이네. 그만 나가줄래~ - 익명함수 탈출 - 리턴을 만났으니까
+      if(event.target !== event.currentTarget){
+        return;
+      }
+    });
+    inner.addEventListener('click',(event) => {//arrow function을 이용하여 객체를 주입 받는다.
+      // console.log(`inner : ${event.currentTarget}, ${event.target}`);
+      if(event.target !== event.currentTarget){
+        return;
+      }
+    });
+    button.addEventListener('click',(event) => {//arrow function을 이용하여 객체를 주입 받는다.
+      console.log(`button1 : ${event.currentTarget}, ${event.target}`);
+      // event.stopPropagation(); // Propagation : 위로 전달하다. 주석으로 막으면서 확인할것
+      // event.stopImmediatePropagation(); : 자기만 클릭한다. 나만 핸들링한다. 고정형(장애) -> 가변형을 쓰자. 절대 쓰지 마라라~~
+    });
+    button.addEventListener('click',(event) => {//arrow function을 이용하여 객체를 주입 받는다.
+      console.log(`button2 : ${event.currentTarget}, ${event.target}`);
+    });
+    /*
+      Capturring
+      : 버튼을 찾아 들어가는 과정이다. 상자를 개봉하는 과정
+      클릭을 하게 되면 바깥쪽에서 안쪽으로 capturing을 먼저 거치게 된다.
+      하지만 사용자에게 보여지거나 결과물에 영향을 주는 요소는 아니다
+      처음 이벤트를 눌렀을 때, 하위의(click me) 버튼이라면, 가장 바깥의 outerbutton부터 - innerbutton - click me로 capturing이 진행된다.
+      브라우저에서 동작하는 컨벤션이다.
+      CAPTURRING은 BUBBLING의 반대이지만, 쓰지 않으니까 잊자
+      
+      BUBBLING을 기억하자. ☆★☆★☆★☆★
+      이벤트가 상위로 전위가 된다. 마치 하위버튼을 누른것처럼.
+      하위에서 상위로 올라가는 것.
+      if문을 통해서 이벤트의 버블링을 멈출 수 있다. 막을 수 있다.
+      ※ Event.stopPropagation : 멈추게 할 수는 있지만 권장하진 않는다.
+      중간에 끼어있는 inner : current Target - <div> / but 이벤트가 발생했던 원래 Target은 <button> / outer도 마찬가지~
+
+      같은 아이콘이어도 넷플과 멜론에서의 재생버튼은 기능이 다르다.
+      정해지지 않았다. 
+      mvc패턴 - 모델계층은 공유할 수 있다.
+    */
+  </script>
+</body>
+</html>
+
+<!--  
+  html태그  - 큰 골격을 먼저 잡는다. dom(document object model)
+            - 뿌리다. 
+            - <head> 화면에 출력되지 않는다.
+            - <body>눈에 보인다</body>
+            -> DOM에 접근할 수 있다.
+  css의 용도 - 디자인 : 마진, 패딩, 배경색(미장)
+  
+  확인할 때, 집중할 때, 검사할 때는 코드가 슬림한게 좋다.
+
+ -->
+
+<!-- 
+ 세미플젝에 메뉴넣고 싶다.
+ - 한번에 적용하고싶다.
+    <ul> - ul에 이벤트처리를 하면 아래 li에 bubble때문에 일괄처리 된다.
+      <li>
+      <li>
+        ...
+        ...
+      <li>
+        일괄처리를 하면 코드의 양이 줄어든다. 복잡도도 줄어든다.
+ router()화면전환.
+-->

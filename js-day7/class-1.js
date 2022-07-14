@@ -1,9 +1,12 @@
 // 클래스 - ES6에서 지원하게 됨
+// 리액트 - 양이 늘어나더라도 복잡도는 증가하지 않는..
 class Car { //객체선언
-  constructor(name, emoji){ //생성자는 초기화
+  // 생성자 함수에서 초기화 가능하다.
+  // 공통분모 : 전변초기화를 담당한다 - 생성자 함수가 -
+  constructor(name, emoji){ // 생성자는 초기화
     this.name = name; // 전역변수를 선언하지 않아도 에러발생x
     this.emoji = emoji; // 클래스 전역에서 사용할 수 있다.
-  }
+  } // 사용자 정의 함수를 가질 수 있다. -> 제공되는 함수가 있다. - window, document.write() : io[input and output] (html문서 전체를 받을 수 있는 객체) : css,html 등등드~
   display = () => {
     console.log(`${this.name}, ${this.emoji}`);
   }
