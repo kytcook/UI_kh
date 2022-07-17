@@ -1,0 +1,87 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Gugi&display=swap');
+* {
+  box-sizing: border-box;
+  /* border: 1px solid red; */
+}
+
+
+ul {
+  list-style: none;/* 목차에 구슬 없앰 */
+}
+
+a {
+  text-decoration: none;
+}
+
+body {
+  background-color: rgb(41, 40, 40);
+  color: rgb(211, 3, 3);
+}
+
+/*==============================================================*/
+header {
+  border-bottom  : 1px solid #aaa; /* 2. 메뉴아래 구분선 */
+  display: flex;
+  align-items   :center;
+  font-family: 'Gugi', cursive;
+  z-index: 2;
+  /* 미디어쿼리를 통해 화면을 동적으로 처리할 수 있다. */
+}
+
+header h1 {
+  width: 25%;
+  margin : 0px 20px; /* 6. 마진 : 위아래 0px 양옆에 20px  */
+  display: flex;
+  justify-content: left;
+  font-size : 60px ;
+  color: rgb(211, 3, 3);
+}
+/*==============================================================*/
+header .gnb {
+  display : flex; /* 5. 안쪽에 있는 li들이 좌우배치 됨 */
+}
+
+header .gnb li {
+  margin : 0px 40px; /* 6. 마진 : 위아래 0px 양옆에 20px  */
+  font: bold 16px/1 "Architects Daughter";
+}
+
+header .gnb li a {
+  color : white;
+  letter-spacing: 3px; /* 자간설정 */
+}
+/*==============================================================*/
+/* 
+header  .login {
+  display: flex;
+  justify-content: end;
+}
+
+header .login li {
+  margin: 0px 10px;
+}
+
+header .login li a {
+  font-size: 16px;
+  margin: 0px 10px;
+}
+ */
+
+/*==============================================================*/
+/* 반응형 웹 처리 : 미디어쿼리 - 동적인 화면  */
+@media screen and (max-width: 1024px) {
+  header .gnb {
+    display: none;
+    }
+  header .lnb {
+    display : none;
+  }
+  header .btnMenu{
+    display: block;
+  }
+  }
+
+/*
+DOM 트리 구조를 이해하는 것이 중요합니다. 
+ */
