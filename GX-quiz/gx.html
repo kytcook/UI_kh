@@ -6,6 +6,7 @@ l<!DOCTYPE html>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <script src="https://kit.fontawesome.com/df14e96577.js" crossorigin="anonymous"></script>
   <link rel="stylesheet" href="./gx.style.css">
+  <script src="./gx.js" defer></script>
   <title>TerrGYM</title>
 </head>
 <body>
@@ -15,16 +16,8 @@ l<!DOCTYPE html>
     <!-- 헤더 끝 -->
     <!-- 데이터셋 시작 -->
     <ul class="items">
-      <li class="item_row">
-        <div class="item">
-          <span class="item_name">스피닝</span>
-          <button class="item_delete" >
-            <i class="fas fa-trash-alt"></i>
-          </button>
-        </div>
-        <div class="item_divider"></div>
-        <hr>
-      </li>
+      <!-- 이 안에 li태그 반복 되어야한다.
+            함수로 만들어야 한다. -->
     </ul>
     <!-- 데이터셋 끝 -->
     <!-- 푸터 시작 -->    
@@ -37,19 +30,6 @@ l<!DOCTYPE html>
     </footer>
     <!-- 푸터 끝 -->    
   </section>
-  
-  <script>
-  const btn_add = document.querySelector(".btn_add")
-  
-  btn_add.addEventListener('click', (event) =>{
-    console.log("add버튼 클릭");;
-    const items = document.createElement('ui');
-
-  });
-
-
-
-  </script>
 </body>
 </html>
 <!-- 
