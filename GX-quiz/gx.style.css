@@ -88,7 +88,7 @@ button {
   height: 48px;
   font-size: 28px;
   border-radius: 50%;
-  transition: transform 300ms ease-in;
+  transition: transform 300ms ease-in;/* 커서를 올려놨을때 강조표시가 자연스럽게 적용된다. */
 }
 
 .btn_add:hover {
