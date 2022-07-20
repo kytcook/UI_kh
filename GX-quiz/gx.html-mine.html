@@ -1,0 +1,94 @@
+l<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://kit.fontawesome.com/df14e96577.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="./gx.style.css">
+  <title>TerrGYM</title>
+</head>
+<body>
+  <section class="list">
+    <!-- 헤더 시작 -->
+    <header class="header">GroupExercise Preference</header>
+    <!-- 헤더 끝 -->
+    <!-- 데이터셋 시작 -->
+    <ul class="items">
+    </ul>
+    <!-- 데이터셋 끝 -->
+    <!-- 푸터 시작 -->    
+    <footer class="footer" >
+      <input type="text" id="footer-input" class="footer_input">
+      <button id="btn_add" class="btn_add">
+        <i class="fas fa-plus"></i>
+        
+      </button>
+    </footer>
+    <!-- 푸터 끝 -->    
+  </section>
+  
+  <script>
+  const input = document.getElementById('footer-input');
+  const button = document.getElementById('btn_add');  
+
+  const items = document.querySelector('.items');//각각의 요소들이 추가되면 최종적으로 items<ul> 자식으로 요소들이 추가됨
+
+  const deleteToDo = (event) => {
+    const remove = event.target.parentNode.parentNode;
+    items.removeChild(remove);
+    };
+
+  const inputText = () => {
+    console.log(input.value);
+    // 원하는 지점을 새로 그려준다고 생각.(ul태그 아래) html -> js언어로 : 동적처리를 위해!
+    const item_row     = document.createElement('li');    //부모 <li> 태그 생성
+    const item         = document.createElement('div');   //입력된 text와 삭제 icon을 묶어줄 부모 <div> 태그 생성
+    const viewText     = document.createElement('span');  //item(div) 자식 요소로서 입력된 text값을 받아와 화면에 보여줄 span 태그 생성
+    const dellIcon     = document.createElement('button');//item(div) 자식 요소로서 클릭시 해당 text를 삭제할 button 태그 생성
+    const item_divider = document.createElement('div');   //item_row(li) 자식 요소로서 클릭시 구분선을 그어줄 div태그 생성 
+    
+    // css적용을 위해 새로생긴 변수들에 클래스를 담아준다.
+    item.className = 'item';
+    viewText.className = 'item_name';
+    dellIcon.className = 'item_delete';
+    item_divider.className = 'item_divider';
+
+    items.appendChild(item_row);       // 최종적으로 items 부모요소 아래에 요소들이 추가 되기 때문에 appendChild()를 사용하여 자식요소로 item_row(<ul>) 추가
+    item_row.appendChild(item);        // item_row 자식 요소로 item(div) 추가
+    item.appendChild(viewText);        // item 자식 요소로 viewText 추가
+    item.appendChild(dellIcon);        // item 자식 요소로 dellIcon 추가
+    item_row.appendChild(item_divider);// item_row 자식 요소로 item_divider 추가
+
+    const span = document.createElement('span');  // 입력된 text값을 넣을 span태그 생성
+    const i = document.createElement('i');        // 삭제 icon을 넣을 i태그 생성
+    const text = input.value;                     // input에 입력된 text 값을 받아와 저장할 변수
+
+    span.className    = 'toDoList';   // 생성된 span태그의 이름은 toDoList 이건 왜있는거지??
+    span.textContent  = text;         // 입력된 값을 화면에 보여주기 위해 span 태그에 text 값을 추가
+    i.className       = 'fas fa-trash-alt';
+
+    viewText.appendChild(span); //span 저장된 요소들을 viewText의 자식요소로 추가
+    dellIcon.appendChild(i);    //아이콘을 dellIcon의 자식요소로 추가
+
+    input.value = '';
+
+    dellIcon.addEventListener('click', deleteToDo);
+    input.value = '';
+  };
+
+  button.addEventListener('click', inputText);    // 아이콘 테두리 클릭해야 삭제됨 -> 버블링사용...??
+  input.addEventListener('keydown', (event) => {
+    if (event.keyCode === 13) {
+      inputText();
+    }
+  });
+  </script>
+</body>
+</html>
+<!-- 
+  다른사람과 소스리뷰, 차이점 확인
+  semantics 구조 확인
+  이벤트처리 꼭 해보기이~~
+  -->
+

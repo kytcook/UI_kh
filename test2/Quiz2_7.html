@@ -5,12 +5,18 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
-  <script src="./index.js" defer></script>
 </head>
 <body>
-  <div id="root"></div>
+  
+  <script>
+    const test7 = document.getElementByClassName("testClass")
+    test7.addEventListener('click', (e) => {
+
+    console.log(`maint5 - ${e.target}, ${e.currentTarget}`);
+
+});
+
+  </script>
+
 </body>
 </html>
-<!-- 
-  리스트와 화면보기가 같은 화면에 보여지고 있다.
- -->
