@@ -8,6 +8,6 @@ div a {
   border: 3px solid yellowgreen;
 }
 /* div의 직계자손만 처리할 때 */
-div > a { 
+div > a {
   border: 3px solid yellowgreen;
 }

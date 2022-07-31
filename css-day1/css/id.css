@@ -3,12 +3,12 @@
    id는 한 페이지 내에 오직 하나만 올 수 있다.
  */
 p {
-  border : 3px solid cyan;
+  border: 2px solid cyan;
 }
 
 p#blue {
-  border : 1px solid blue;
+  border: 10px solid blue;
 }
 p#red {
-  border : 1px solid red;
+  border: 10px solid red;
 }

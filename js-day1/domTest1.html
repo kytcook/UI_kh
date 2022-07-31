@@ -1,32 +1,43 @@
-<!DOCTYPE html> <!-- 선언문이다. 생략할 수 있다. 브라우저(크롬 - v8엔진 - 구글이 오픈소스 공개 - C++개발) 알고 있다. -->
-<html lang="en"> <!-- 태그명 영문 -->
-<head>
-  <meta charset="UTF-8"> <!--인코딩 타입은 다국어지원하는 UTF-8 : 리액트, AJAX, 빈태그 empty tag -->
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- 뷰포트 -->
-  <title>Document</title>
-</head>
-<body>
-  <!-- (주석 html, xml)
+<!DOCTYPE html>
+<!-- 선언문이다. 생략할 수 있다. 브라우저(크롬 - v8엔진 - 구글이 오픈소스 공개 - C++개발) 알고 있다. -->
+<html lang="en">
+  <!-- 태그명 영문 -->
+  <head>
+    <meta charset="UTF-8" />
+    <!--인코딩 타입은 다국어지원하는 UTF-8 : 리액트, AJAX, 빈태그 empty tag -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- 뷰포트 -->
+    <title>Document</title>
+  </head>
+  <body>
+    <!-- (주석 html, xml)
   브라우저는 이 파일을 다운로드(로컬) - DOM트리를 구성한다.(브라우저가) - 인터프리터(통역) - 출력
   -->
-  <img src="../images/nature_01.jpg" width ="500px" height="350px" alt="자연">
-  <script> 
-    // document.write(); document는 브라우저에서 제공되는 내장객체이다. - XXX.html문서의 상위객체이다.
-    // document에 대한 최상위객체는 window이다
-    window.onload = function() { 
-      // onload : 윈도우 문서가 로딩이 다 되었을 때(그래야 domtree가 완성 됐을테니까)
-      // h1노드는 태그이름은 있고 값은 없다.
-      const header = document.createElement("h1");
-      // 텍스트 노드는 태그이름은 없고 값만 있다.
-      const textNode = document.createTextNode("DOM TREE");
-      // 노드를 연결합니다.
-      header.appendChild(textNode);
-      document.body.appendChild(header);
-    }
-  </script>
-</body>
+    <img
+      src="../images/nature_01.jpg"
+      width="500px"
+      height="350px"
+      alt="자연"
+    />
+    <script>
+      // document.write(); document는 브라우저에서 제공되는 내장객체이다. - XXX.html문서의 상위객체이다.
+      // document에 대한 최상위객체는 window이다
+      window.onload = function () {
+        // onload : 윈도우 문서가 로딩이 다 되었을 때(그래야 domtree가 완성 됐을테니까)
+        // h1노드는 태그이름은 있고 값은 없다.
+        const header = document.createElement("h1");
+        const header1 = document.createElement("h1");
+        // 텍스트 노드는 태그이름은 없고 값만 있다.
+        const textNode = document.createTextNode("DOM TREE");
+        const textNode1 = document.createTextNode("난 바보야 안녕");
+        // 노드를 연결합니다.
+        header.appendChild(textNode);
+        header.appendChild(textNode1);
+        document.body.appendChild(header);
+      };
+    </script>
+  </body>
 </html>
-
 
 <!-- react에서는 태그를 만들어 쓸 것이다. -->

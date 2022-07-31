@@ -1,10 +1,10 @@
-const colors = ['green','red ','blue'];
+const colors = ["green", "red ", "blue"];
 console.log(colors[0]);
 console.log(colors[1]);
 console.log(colors[2]);
 
 // 추가, 삭제
-colors[4] = 'white';
+colors[4] = "white";
 console.log(colors); // 배열 중간에 빈공란을 만들고 5번째 자리에 들어감 - 자바는 안됨
 delete colors[1];
 console.log(colors); // 삭제할 때 이런방식은 좋지 못하당
@@ -12,19 +12,19 @@ console.log(colors); // 삭제할 때 이런방식은 좋지 못하당
 // 배열 생성 방법
 let array = new Array(3);
 console.log(array); // 3개는 만들어졌지만 아이템은 비어있다.
-array = new Array(1,2,3);
+array = new Array(1, 2, 3);
 console.log(array);
 
-array = Array.of(1,2,3,4,5);
+array = Array.of(1, 2, 3, 4, 5);
 console.log(array);
-const deptnos = [10,20,30];
+const deptnos = [10, 20, 30];
 array = Array.from(deptnos);
 console.log(array);
 
 array = Array.from({
   0: 10,
-  1: '개발부',
-  2: '서울'
+  1: "개발부",
+  2: "서울",
 });
 console.log(array);
 

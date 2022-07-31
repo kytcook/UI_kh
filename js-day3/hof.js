@@ -1,25 +1,26 @@
 // 고차함수 (Higher order function)
-const colors = ['green','red ','blue'];
+const colors = ["green", "red ", "blue"];
 
 // 고차함수를 사용하지 않고 출력하기
 for (let i = 0; i < colors.length; i++) {
   console.log(colors[i]);
 }
 
-// 고차함수를 사용해서 출력하기 - 배열을 돌면서 원하는(콜백함수) 것을 할 때 사용함 
+// 고차함수를 사용해서 출력하기 - 배열을 돌면서 원하는(콜백함수) 것을 할 때 사용함
 // 자바스크립트에서도 같은 이름의 함수를 정의할 수 없다
-colors.forEach(function(value, index,array) {
+colors.forEach(function (value, index, array) {
   console.log(value);
   console.log(index);
   console.log(array);
   // console.log(thisArg);
-})
-colors.forEach(function(value) { // 이름이 같으면 같은 함수를 부른다.
+});
+colors.forEach(function (value) {
+  // 이름이 같으면 같은 함수를 부른다.
   console.log(value);
-})
+});
 // arrow function으로 바꾸면?
 
-console.log('---------------------------------------');
+console.log("---------------------------------------");
 colors.forEach((value) => console.log(value));
 
 function myForEach(array, action) {
@@ -27,7 +28,7 @@ function myForEach(array, action) {
     action(array[i]);
   }
 }
-console.log('-----------------------------------------');
+console.log("-----------------------------------------");
 myForEach(colors, console.log);
 
 /* 
@@ -60,44 +61,44 @@ myForEach(colors, console.log);
 */
 
 // 조건에 맞는 아이템을 찾기 -find
-const food1 = { menu: '🍔', price: 100 };
-const food2 = { menu: '🥩', price: 150 };
-const food3 = { menu: '🍗', price: 200 };
+const food1 = { menu: "🍔", price: 100 };
+const food2 = { menu: "🥩", price: 150 };
+const food3 = { menu: "🍗", price: 200 };
 
 const foods = [food1, food2, food3, food2];
 let findItem = foods.find((value) => {
-  return value.menu === '🥩';
-})
+  return value.menu === "🥩";
+});
 console.clear();
 console.log(findItem);
 // findIndex를 사용하여 조건에 맞는 인덱스 출력하기
-findItem = foods.findIndex((value) => value.menu === '🥩');
+findItem = foods.findIndex((value) => value.menu === "🥩");
 console.log(findItem);
-findItem = foods.every((value) => value.menu === '🥩');
+findItem = foods.every((value) => value.menu === "🥩");
 console.log(findItem);
 // 조건에 맞는 걸 찾아서 새로운 배열 생성해줌 - 리액트 검색처리 할 때
 // 새로운 배열을 만들어준다 - 중요
-findItem = foods.filter((value) => value.menu === '🥩');
+findItem = foods.filter((value) => value.menu === "🥩");
 console.log(findItem);
 
 // 맵Map을 이용한 예제
 // 각각의 값들에 2를 곱해서 새로운 배열을 만드는 함수
-let nums = [1,2,3,4,5];//[2,4,6,8,10]
+let nums = [1, 2, 3, 4, 5]; //[2,4,6,8,10]
 let result = nums.map((item) => item * 10);
 console.log(result);
 result = nums.map((item) => {
-  if(item % 2 === 0) return item * 2;
+  if (item % 2 === 0) return item * 2;
   else return item;
-})
+});
 console.log(result);
 // 원숭이를 호랑이로 교체하는 함수 만들기
-let animals = ['🐱','🐵','🐔','🙉'];
+let animals = ["🐱", "🐵", "🐔", "🙉"];
 
-function change(array){
+function change(array) {
   const newArray = Array.from(array);
   for (let i = 0; i < newArray.length; i++) {
-    if(newArray[i] === '🙉') {
-      newArray[i] = '🐯';
+    if (newArray[i] === "🙉") {
+      newArray[i] = "🐯";
     }
   }
   return newArray;
@@ -106,14 +107,13 @@ console.log(animals);
 console.log(change(animals));
 
 // 재사용성을 높이는 함수로 레벨 업 해 보자.
-function change2(array, from, to){
+function change2(array, from, to) {
   const newArray = Array.from(array);
   for (let i = 0; i < newArray.length; i++) {
-    if(newArray[i] === from) {
+    if (newArray[i] === from) {
       newArray[i] = to;
     }
-
   }
   return newArray;
 }
-console.log(change2(animals, '🙉', '🐯'));
+console.log(change2(animals, "🙉", "🐯"));

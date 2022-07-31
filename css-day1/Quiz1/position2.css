@@ -1,47 +1,47 @@
 @charset 'utf-8';
 
 .wrap {
-  width  : 800px;
-  height : 500px;
-  border : 10px solid black;
-  margin : 100px auto;
+  width: 800px;
+  height: 500px;
+  border: 10px solid black;
+  margin: 100px auto;
 }
 
 /* 가상선택자는 인라인요소 이므로 블록요소로 변경해줌 */
 .wrap::after {
-  content: '';
+  content: "";
   display: block;
-  clear:both;
+  clear: both;
 }
 
 .left {
-  width   : 400px;
-  height  : 400px;
+  width: 400px;
+  height: 400px;
   background-color: cyan;
   float: left;
 }
 
 .right {
-  width   : 400px;
-  height  : 400px;
+  width: 400px;
+  height: 400px;
   background-color: greenyellow;
   float: right;
-  position :relative
+  position: relative;
 }
 .right p {
-  width : 100px;
+  width: 100px;
   height: 100px;
   background-color: gray;
   position: absolute; /* 자기 영역을 무시하고 바깥쪽으로 이동 */
-  bottom  : 10px;
-  right   : 10px;
+  bottom: 10px;
+  right: 10px;
 }
 
 .bottom {
-  width   : 800px;
-  height  : 100px;
+  width: 800px;
+  height: 100px;
   background-color: hotpink;
-  float: left
+  float: left;
 }
 
 /* 
